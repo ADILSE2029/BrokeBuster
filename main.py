@@ -16,11 +16,13 @@ def main():
                 m1.decorator(60)
 
                 user_choice = input(
-                    "[A] Add Category\n[V] View Current Categories\n\nChoice:").lower()
+                    "[A] Add Category\n[V] View Current Categories\n[R] Remove Category\n\nChoice:").lower()
                 if user_choice == "a":
                     classed.add_category()
                 elif user_choice == "v":
                     classed.view_category()
+                elif user_choice == "r":
+                    classed.remove_category()
                 else:
                     print("Invalid Input")
 
