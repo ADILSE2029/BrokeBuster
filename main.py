@@ -4,52 +4,52 @@ import module1 as m1
     ## main area
 def main():
 
-    functions= m1.BrokeBuster()
+    brokebuster= m1.BrokeBuster()
 
-    functions.decorator()
+    brokebuster.decorator()
     print("\t BROKE BUSTER \t")
     
 
     while True:
         try:
 
-            functions.decorator()
+            brokebuster.decorator()
             user_choice = input(
                 "[A] Add Expense\n[M] Manage Category\n[R] Reset\n[E] Exit\n\nChoice:").lower()
             
 
             if user_choice == "a":
-                functions.add_expense()
+                brokebuster.add_expense()
             elif user_choice == "m":
 
-                functions.decorator()
+                brokebuster.decorator()
                 user_choice = input(
                     "[A] Add Category\n[V] View Current Categories\n[R] Remove Category\n\nChoice:").lower()
                 if user_choice == "a":
-                    functions.add_category()
+                    brokebuster.add_category()
                 elif user_choice == "v":
-                    functions.view_category()
+                    brokebuster.view_category()
                 elif user_choice == "r":
-                    functions.remove_category()
+                    brokebuster.remove_category()
                 else:
-                    functions.decorator()
+                    brokebuster.decorator()
                     print("Invalid Input")
 
 
             elif user_choice == "r":
                 
-                functions.reset()
+                brokebuster.reset()
             elif user_choice == "e":
-                functions.decorator()
+                brokebuster.decorator()
                 print("Thanks for using")
                 break
             else:
-                functions.decorator()
+                brokebuster.decorator()
                 print("Invalid Input")
 
 
         except ValueError:
-            functions.decorator()
+            brokebuster.decorator()
             print("Invalid Input")
             
 
