@@ -1,43 +1,57 @@
 
 import module1 as m1
 
-
+    ## main area
 def main():
-    classed = m1.BrokeBuster()
+
+    functions= m1.BrokeBuster()
+
+    functions.decorator()
+    print("\t BROKE BUSTER \t")
+    
+
     while True:
-        m1.decorator(60)
         try:
+
+            functions.decorator()
             user_choice = input(
                 "[A] Add Expense\n[M] Manage Category\n[R] Reset\n[E] Exit\n\nChoice:").lower()
-            if user_choice == "a":
-                m1.decorator(60)
-                classed.add_expense()
-            elif user_choice == "m":
-                m1.decorator(60)
+            
 
+            if user_choice == "a":
+                functions.add_expense()
+            elif user_choice == "m":
+
+                functions.decorator()
                 user_choice = input(
                     "[A] Add Category\n[V] View Current Categories\n[R] Remove Category\n\nChoice:").lower()
                 if user_choice == "a":
-                    classed.add_category()
+                    functions.add_category()
                 elif user_choice == "v":
-                    classed.view_category()
+                    functions.view_category()
                 elif user_choice == "r":
-                    classed.remove_category()
+                    functions.remove_category()
                 else:
+                    functions.decorator()
                     print("Invalid Input")
 
+
             elif user_choice == "r":
-                m1.decorator(60)
-                classed.reset()
+                
+                functions.reset()
             elif user_choice == "e":
-                m1.decorator(60)
+                functions.decorator()
                 print("Thanks for using")
                 break
             else:
+                functions.decorator()
                 print("Invalid Input")
+
+
         except ValueError:
+            functions.decorator()
             print("Invalid Input")
-            print("Hello")
+            
 
 
 if __name__ == "__main__":
